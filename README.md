@@ -137,7 +137,6 @@ Create `CLAUDE.md` in your project root:
 - Clean: `mcp__xcodebuildmcp__clean`
 
 ## Project Structure
-```
 MyApp/
 ├── App/                    # App entry point, App delegate
 ├── Features/               # Feature modules
@@ -227,10 +226,9 @@ When starting new features:
 @import docs/PRD.md
 @import docs/ARCHITECTURE.md
 @import docs/ROADMAP.md
-```
+
 
 ### Nested CLAUDE.md for Feature Directories
-
 Create `.claude/CLAUDE.md` or `Features/[FeatureName]/CLAUDE.md`:
 
 ```markdown
@@ -250,6 +248,7 @@ Create `.claude/CLAUDE.md` or `Features/[FeatureName]/CLAUDE.md`:
 1. Parent ViewModel holds `@Published var childViewModel: ChildViewModel?`
 2. View observes and presents sheet when non-nil
 3. Dismissal sets childViewModel to nil
+```
 
 ### Example
 ```swift
@@ -265,15 +264,13 @@ final class ParentViewModel {
 
 ## Testing
 Run tests: `mcp__xcodebuildmcp__swift_package_test`
-```
 
 ---
 
 ## 4. PRD-Driven Development Workflow
 
+```markdown
 ### Directory Structure for PRD Workflow
-
-```
 docs/
 ├── PRD.md                      # Main Product Requirements Document
 ├── ARCHITECTURE.md             # System architecture decisions
@@ -390,7 +387,7 @@ struct FeatureModel: Codable, Identifiable {
 ```
 
 ### API Endpoints (if applicable)
-```
+```markdown
 GET /api/v1/feature
 POST /api/v1/feature
 ```
@@ -417,7 +414,7 @@ POST /api/v1/feature
 
 ## Open Questions
 - [ ] Question 1?
-```
+
 
 ### Task File Template (`docs/tasks/feature-tasks.md`)
 
