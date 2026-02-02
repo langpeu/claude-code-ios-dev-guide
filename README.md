@@ -119,7 +119,7 @@ The `CLAUDE.md` file is your primary context provider. Claude automatically load
 
 Create `CLAUDE.md` in your project root:
 
-```markdown
+```swift
 # Project: [Your App Name]
 
 ## Quick Reference
@@ -150,7 +150,6 @@ MyApp/
 │   └── Networking/
 ├── Resources/              # Assets, Localizations
 └── Tests/
-```
 
 ## Coding Standards
 
@@ -170,23 +169,19 @@ MyApp/
 - Use `@Bindable` for bindings to @Observable objects
 
 ### Navigation Pattern
-```swift
 // Use NavigationStack with type-safe routing
 enum Route: Hashable {
     case detail(Item)
     case settings
 }
-
 NavigationStack(path: $router.path) {
     ContentView()
         .navigationDestination(for: Route.self) { route in
             // Handle routing
         }
 }
-```
 
 ### Error Handling
-```swift
 // Always use typed errors
 enum AppError: LocalizedError {
     case networkError(underlying: Error)
@@ -199,7 +194,6 @@ enum AppError: LocalizedError {
         }
     }
 }
-```
 
 ## Testing Requirements
 - Unit tests for all ViewModels
@@ -226,6 +220,7 @@ When starting new features:
 @import docs/PRD.md
 @import docs/ARCHITECTURE.md
 @import docs/ROADMAP.md
+```
 
 
 ### Nested CLAUDE.md for Feature Directories
